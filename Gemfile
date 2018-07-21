@@ -25,5 +25,3 @@ group :development do
 
 end
 
-
-end
