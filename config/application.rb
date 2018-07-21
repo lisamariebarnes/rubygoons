@@ -1,6 +1,9 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+# config/application.rb
+config.assets.initialize_on_precompile = false
+config.active_record.dump_schema_after_migration = false
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
