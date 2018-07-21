@@ -1,0 +1,86 @@
+<% @team_number.times do %>
+
+<div class = "row">
+      <br/>
+      
+      <div class = "col-md-4">
+           
+            <% rand_num = rand (1..1000) %>
+            <% set_number =rand (1..4)%>
+            <% bg = rand (1..2) %>
+               
+               
+     <% if set_number == 1 %>
+     <% set ="set1" %>
+    <% elsif set_number == 2 %>
+    <% set = "set2" %>
+    <% elsif set_number == 3 %>
+    <% set ="set3"%>
+   <% else %>
+   <%  set ="set4" %>
+   <% end %>
+   
+   <% if bg == 1 %>
+     <% background = "bg1"%>
+  <% else %>
+   <%  background ="bg2"%>
+  <% end %>
+     
+   
+  <% @avatar = Faker::Avatar.image(@rand_num, "300x300", "png", set, background) %>
+  
+   
+  
+            
+            
+            
+            
+            
+            
+            
+            <img src="<%= @avatar %>">
+        <br/><br/>
+      </div>
+      
+      <div class ="col-md-4">
+    <h3>Your Super Hero Name:<br/>
+    <b><span class="blue"><%= Faker::Superhero.name %></span></b>
+    </h3>
+    
+     <h3>Your Super Hero Power Is:<br/>
+    <b><span class ="red"><%= Faker::Superhero.power %></span></b>
+     </h3></br>
+     
+     <h4>Your Undercover Day Job is:</br>
+     <span class ="corp_red"><%= Faker::Name.title %></span>
+     </h4>
+     
+     <h4>Your Corporate Superpower is: </br>
+     <span class ="corp_red"><%= Faker::Company.bs.titleize%></span>
+     </h4>
+     
+     
+     <h4>Your Fueled by:</br>
+     <span class ="corp_red"><%=Faker::Food.dish.titleize %>
+     </h4>
+     </div>
+     
+       
+     
+     
+     
+     <div class ="col-md-4">
+     Placeholder for something good here?
+     </div>
+     
+     
+
+     
+     </div>
+     <div class ="row">
+           <div class="col-md-12">
+                 <hr>
+           </div>
+     </div>
+     
+     <% end %>
