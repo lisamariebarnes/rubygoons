@@ -12,16 +12,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'faker', '~> 1.8', '>= 1.8.4'
 
-
-
-
-group :development, :test do
-  gem 'byebug'
-end
-
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
-
+  gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 end
+ 
+ 
+group :production do
+  gem 'pg', '~> 0.21.0' 
+  gem 'rails_12factor'
+end
+
+
+
 
